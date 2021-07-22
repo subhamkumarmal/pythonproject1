@@ -1,0 +1,75 @@
+{% extends 'fashions/common.html' %}
+{% block title %}Shoes Home {% endblock %}
+{% block style %}
+
+body{
+background-color:black;
+font-family: 'Bevan', cursive;
+}
+.shoescontainer{
+margin-top:20px;
+background-image:url("https://previews.123rf.com/images/finwal81/finwal811705/finwal81170500038/79156103-vintage-sport-shoes-top-view-sport-background.jpg");
+height:80vh;
+
+}
+
+.prah{
+widht:100%;
+padding-top:80px;
+padding-left:40px;
+}
+
+.p1{
+width:50%;
+}
+
+.bton{
+width:200px;
+height:40px;
+margin-top:30px;
+border-radius:20px;
+outline-style:none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+{% endblock %}
+
+{% block body %}
+
+<div>
+    <div class="container shoescontainer">
+      <div class="prah">
+      <h1>Welcome To The World Of Shoes </h1>
+          <div class="p1 mt-5">
+              <p>A shoe is an item of footwear intended to protect and comfort the human foot. Shoes are also used as an item of decoration and fashion. The design of shoes has varied enormously through time and from culture to culture, with appearance originally being tied to function.</p>
+            <p>Here You Can Get Any Types Of Shoes......</p>
+          </div>
+          <div >
+              <button class="bton">shoes</button>
+          </div>
+          <br>
+          <br>
+          <div>
+              <marquee  direction = "up"> THANKS FOR VISITING OUR WEB PAGE AND ALSO DO COME AGAIN....</marquee>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="footer">
+   <marquee id="maru" direction = "right">In Order To Buy Our Prducts You May Contact Us On This Number 8899330338. We Will Be Happy To Help You.</marquee>
+</div>
+
+{% endblock %}

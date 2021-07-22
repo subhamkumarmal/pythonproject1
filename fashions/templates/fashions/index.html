@@ -1,0 +1,90 @@
+{% extends 'fashions/common.html' %}
+{% block title %} FashionsWorld {% endblock %}
+{% block style %}
+body{
+background-image:url("https://leverageedu.com/blog/wp-content/uploads/2019/06/Fashion-Designing-800x501.png");
+background-repeat:no-repeat;
+background-size:cover;
+font-family: 'Antic Slab', serif;
+font-size:20px;
+font-weight:bold;
+}
+
+.container{
+background:transparent;
+text-align:center;
+}
+
+ .carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 150px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+  background: #ED2;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  margin-bottom:5px;
+
+}
+
+{% endblock %}
+
+
+{% block body %}
+<div >
+    <div class="container">
+        <h2 class="" style="color:blue"> <strong>WELCOME TO THE FASHIONS WORLD</strong></h2>
+        <p>Fashion is a form of self-expression and autonomy at a particular period and place and in a specific context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture. In its everyday use, the term implies a look defined by the fashion industry as that which is trending.</p>
+        <br>
+
+    </div>
+</div>
+
+
+<div class="footer">
+<div class="carousel" data-flickity='{ "groupCells": true }'>
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="carousel-cell">
+  <img src="https://contents.mediadecathlon.com/p1484240/ab565f3675dbdd7e3c486175e2c16583/p1484240.jpg" class="carousel-cell">
+  <img src="https://images-na.ssl-images-amazon.com/images/I/61utX8kBDlL._UL1100_.jpg" class="carousel-cell">
+  <img src="https://www.armani.com/38/38968023wb_13_d.jpg" class="carousel-cell">
+  <img src="https://cdn.shopclues.com/images1/thumbnails/108508/320/320/150343301-108508936-1595055359.jpg" class="carousel-cell">
+  <img src="data:image/jpeg;base64,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" class="carousel-cell">
+  <img src="https://www.sheideas.com/wp-content/uploads/2018/05/Latest-Blue-Jeans-Top-Designs-Images.jpg" class="carousel-cell">
+  <img src="https://images-na.ssl-images-amazon.com/images/I/91PHuV4uxSL._UY550_.jpg" class="carousel-cell">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="carousel-cell">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="carousel-cell">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="carousel-cell">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" class="carousel-cell">
+</div>
+
+</div>
+
+
+{% endblock %}
