@@ -1,0 +1,204 @@
+{% extends 'health/commons.html' %}
+
+
+{% block title %}medicine{% endblock %}
+
+{% block style %}
+
+    /* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: 'Roboto Slab', serif;
+font-weight:bold;
+font-size:20px}
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.container{
+margin-top:50px;
+display:grid;
+place-items:center;
+}
+#tablat1{
+height:250px;
+width:70%;
+}
+
+<!--FOOTER AREA -->
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 300px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 567em) {
+    body {
+      margin-bottom: 300px;
+    }
+    .footer {
+      height: 300px;
+    }
+
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+
+{% endblock %}
+{% block body %}
+
+
+<!-- Flickity HTML init -->
+<div class="carousel mt-2" data-flickity='{ "autoPlay": true }'>
+  <img src="https://www.swissinsurancepartners.com/wp-content/uploads/2020/04/Mayo-120419-EdOnly-2732x1200-shutterstock_248972407-scaled.jpg" class="carousel-cell">
+  <img src="https://www.usnews.com/dims4/USNEWS/e70e9c8/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fcc%2F76%2F0f022cd145289235e032498d9a46%2F140522-cincinnatichildrens-submitted.jpg" class="carousel-cell">
+  <img src="https://news.med.virginia.edu/medicinematters/files/2017/09/uvahospbedtower_header_3-2.jpg" class="carousel-cell">
+  <img src="https://www.topmastersinhealthcare.com/wp-content/uploads/2016/02/University-of-Washington-Medical-Center-Seattle-Cancer-Care-Alliance-Best-Cancer-Hosptials.jpg" class="carousel-cell">
+  <img src="https://lh3.googleusercontent.com/proxy/xwfRQzl-T6b-SZABxabPUiNkrjHbjEam-L27zY_tCO37BGoedayrfBPCyfivD_4PVsmH9Nplb-1x7MdDVApa6mo_M3LzMVJD0Iujz4J6Uc8jWkdx9l4mP-zmhVUWCTcy8_CjYXvDlEKnGJIhXT5o4Gv2iRJUFnMZGKQ" class="carousel-cell"></img>
+</div>
+
+
+<div class="pagedetails">
+<div class="container">
+
+  Tablets: In pharmacy, a medication, usually mixed with a binder powder, molded and pressed into the form of a tablet, traditionally circular or disk-shaped, but more recently also oblong or differently shaped. From the French tablette, little table.
+<img id="tablat1" src="https://images.theconversation.com/files/256057/original/file-20190129-108364-17hlc1x.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop">
+
+<h3>What is medicine?</h3>
+  <p>Medicine is the field of health and healing. It includes nurses, doctors, and various specialists. It covers diagnosis, treatment, and prevention of disease, medical research, and many other aspects of health.
+
+Medicine aims to promote and maintain health and wellbeing.
+
+Conventional modern medicine is sometimes called allopathic medicine. It involves the use of drugs or surgery, often supported by counseling and lifestyle measures.
+
+Alternative and complementary types of medicine include acupuncture, homeopathy, herbal medicine, art therapy, traditional Chinese medicine, and many more.</p>
+<h2>Fields of medicine</h2>
+  <img src="data:image/jpeg;base64,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">
+<p>A clinician is a health worker who works directly with patients in a hospital or other healthcare setting. Nurses, doctors, psychotherapists, and other specialists are all clinicians.
+
+Not all medical specialists are clinicians. Researchers and laboratory workers are not clinicians because they do not work with patients.
+
+The physician assesses the individual, with the aim of diagnosing, treating, and preventing disease using knowledge learned from training, research, and experiences, and clinical judgment.</p>
+
+</div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5><i class="fa fa-road"></i> ACME CO INC.</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Product</a></li>
+                            <li><a href="">Benefits</a></li>
+                            <li><a href="">Partners</a></li>
+                            <li><a href="">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Legal Terms</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Contact Us</h5>
+                <hr>
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <fieldset class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group text-xs-right">
+                        <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
